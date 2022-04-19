@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import CategoriesButtons from './CategoriesButtons'
 
 const PostDetail = ({ post }: any) => {
   const getContentFragment = (index: any, text: any, obj: any, type: any) => {
@@ -60,7 +61,8 @@ const PostDetail = ({ post }: any) => {
   }
 
   return (
-    <div className="mb-8 rounded-lg pb-12 text-white shadow-lg lg:p-8">
+    <div className="relative mb-8 rounded-lg pb-12 text-white lg:p-8">
+      <span className="right-0 hidden h-full w-[1px] bg-white opacity-10 lg:absolute"></span>
       <h1 className="mb-8 font-primary text-5xl font-semibold leading-tight">
         {post.title}
       </h1>
@@ -81,7 +83,7 @@ const PostDetail = ({ post }: any) => {
           <div className="font-medium ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="mr-2 inline h-6 w-6 text-pink-500"
+              className="mr-2 inline h-6 w-6 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -96,7 +98,8 @@ const PostDetail = ({ post }: any) => {
             <span>{moment(post.createdAt).format('MMM, DD, YYYY')}</span>
           </div>
         </div>
-        <div className="reative mb-6 overflow-hidden shadow-md">
+        <CategoriesButtons />
+        <div className="reative mb-6 overflow-hidden">
           <img
             src={post.featuredImage.url}
             alt={post.title}

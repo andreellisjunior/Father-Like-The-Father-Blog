@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getCategories } from '../services'
 
-const Categories = () => {
+const CategoriesButtons = () => {
   const [categories, setCategories] = useState<any[]>([])
 
   useEffect(() => {
     getCategories().then((newCategories) => setCategories(newCategories))
   }, [])
   return (
-    <div className="mb-8 rounded-lg bg-[#777777] p-8 pb-12 text-white shadow-lg">
-      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categories</h3>
+    <div className="mb-8 flex gap-3 text-white">
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="mb-3 block cursor-pointer pb-3">
+          <span className="transistion inline-block transform cursor-pointer rounded-full bg-primary px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white shadow-lg duration-500 hover:-translate-y-0.5 hover:shadow-xl">
             {category.name}
           </span>
         </Link>
@@ -22,4 +21,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default CategoriesButtons

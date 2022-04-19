@@ -1,22 +1,24 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { getCategories } from '../services'
+import React from 'react'
 import Link from 'next/link'
-import logo from '../public/white-logo.svg'
+import { motion } from 'framer-motion'
+
+import animations from '../animations/animations'
 
 const Header = () => {
-  const [categories, setCategories] = useState<any[]>([])
-
-  useEffect(() => {
-    getCategories().then((newCategories) => setCategories(newCategories))
-  }, [])
   return (
     <header className="absolute top-0 z-50 w-full bg-transparent px-10">
       <div className="container mx-auto ">
-        <div className="flex w-full items-center justify-between py-5">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={animations.containerAnimation}
+          className="flex w-full items-center justify-between py-5"
+        >
           <div className="block md:float-left">
             <Link href="/">
               <span className="cursor-pointer text-4xl font-bold text-white">
-                <img
+                <motion.img
+                  variants={animations.item}
                   src="/white-logo.svg"
                   alt="Father Like The Father Logo"
                   className="h-full w-48"
@@ -33,27 +35,39 @@ const Header = () => {
                             </Link>
                         ))} */}
             <Link href="/">
-              <span className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline">
+              <motion.span
+                variants={animations.item}
+                className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline"
+              >
                 HOME
-              </span>
+              </motion.span>
             </Link>
             <Link href="/about">
-              <span className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline">
+              <motion.span
+                variants={animations.item}
+                className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline"
+              >
                 ABOUT
-              </span>
+              </motion.span>
             </Link>
             <Link href="/blog">
-              <span className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline">
+              <motion.span
+                variants={animations.item}
+                className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline"
+              >
                 BLOG
-              </span>
+              </motion.span>
             </Link>
             <Link href="/contact">
-              <span className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline">
+              <motion.span
+                variants={animations.item}
+                className="mt-2 ml-4 cursor-pointer align-middle text-white hover:underline"
+              >
                 CONTACT
-              </span>
+              </motion.span>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </header>
   )
