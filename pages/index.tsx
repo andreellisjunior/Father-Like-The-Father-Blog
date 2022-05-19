@@ -4,6 +4,7 @@ import { Header } from '../components'
 import AboutSection from '../sections/AboutSection'
 import HeroSection from '../sections/HeroSection'
 import { getPosts } from '../services'
+import FeaturedPosts from '../sections/FeaturedPosts'
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <HeroSection />
       <AboutSection />
+      <FeaturedPosts />
     </div>
   )
 }
