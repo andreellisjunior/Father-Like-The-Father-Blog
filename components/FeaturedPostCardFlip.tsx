@@ -1,8 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 
-const FeaturedPostCard = ({ post }: any) => (
-  <div className="wrapper relative mx-auto my-24 flex max-w-7xl items-center justify-center">
+const FeaturedPostCardFlip = ({ post }: any) => (
+  <div className="wrapper relative mx-auto my-80 flex max-w-7xl items-center justify-center">
+    <div className="right-img relative h-96 w-[60rem]">
+      <div
+        className="absolute right-16 h-full w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-md"
+        style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
+      />
+    </div>
     <div className="left-text relative left-16 z-10 flex w-7/12 flex-col items-start rounded-xl bg-white py-8 px-8 text-[#777777]">
       <h3 className="mb-4 text-4xl">{post.title}</h3>
       <p className="mb-4">{post.except}</p>
@@ -12,16 +18,10 @@ const FeaturedPostCard = ({ post }: any) => (
         </span>
       </Link>
     </div>
-    <div className="right-img relative h-96 w-[60rem]">
-      <div
-        className="absolute right-16 h-full w-full rounded-lg bg-cover bg-center bg-no-repeat shadow-md"
-        style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
-      />
-    </div>
   </div>
 )
 
-export default FeaturedPostCard
+export default FeaturedPostCardFlip
 
 {
   /* <div

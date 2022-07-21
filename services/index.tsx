@@ -209,6 +209,7 @@ export const getFeaturedPosts = async () => {
           }
           title
           slug
+          except
           createdAt
         }
       }   
