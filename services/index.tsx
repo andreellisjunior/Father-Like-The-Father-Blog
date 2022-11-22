@@ -1,4 +1,4 @@
-import { request, gql } from 'graphql-request'
+import { gql, request } from 'graphql-request'
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
 
@@ -56,7 +56,7 @@ export const getPostDetails = async (slug: any) => {
         createdAt
         slug
         content {
-          raw
+          html
         }
         categories {
           name
@@ -128,6 +128,23 @@ export const getCategories = async () => {
   const result = await request(graphqlAPI, query)
 
   return result.categories
+}
+
+export const getPostCategories = async (slug: any) => {
+  const query = gql`
+    query GetPostCategories($slug: String!) {
+      post(where: { slug: $slug }) {
+        categories {
+          name
+          slug
+        }
+      }
+    }
+  `
+
+  const result = await request(graphqlAPI, query, { slug })
+
+  return result.post
 }
 
 export const submitComment = async (obj: any) => {

@@ -1,10 +1,12 @@
 import React from 'react'
+import { HeadSEO } from '../components'
 import HeroSection from '../sections/HeroSection'
 import InternalHeroSection from '../sections/InternalHeroSection'
 
 const about = () => {
   return (
     <>
+      <HeadSEO title={`About`} />
       {/* Hero Section */}
       <InternalHeroSection title="ABOUT" img="about" />
 

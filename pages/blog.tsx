@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
-import { PostCard, Categories, PostWidget } from '../components'
+import { Categories, HeadSEO, PostCard, PostWidget } from '../components'
 import InternalHeroSection from '../sections/InternalHeroSection'
 import { getPosts } from '../services'
 
 const Blog = ({ posts }: any) => {
   return (
     <>
+      <HeadSEO title={`Blog`} />
       <InternalHeroSection title="BLOG" img="blog" />
       <div className="container mx-auto mb-8 mt-28 px-10">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">

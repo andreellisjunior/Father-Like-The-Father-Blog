@@ -1,72 +1,83 @@
-import React from 'react'
 import moment from 'moment'
+import Link from 'next/link'
+import React from 'react'
 import CategoriesButtons from './CategoriesButtons'
 
 const PostDetail = ({ post }: any) => {
-  const getContentFragment = (index: any, text: any, obj: any, type: any) => {
-    let modifiedText = text
+  //   const getContentFragment = (index: any, text: any, obj: any, type: any) => {
+  //     let modifiedText = text
 
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>
-      }
+  //     if (obj) {
+  //       if (obj.bold) {
+  //         modifiedText = <b key={index}>{text}</b>
+  //       }
 
-      if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>
-      }
+  //       if (obj.italic) {
+  //         modifiedText = <em key={index}>{text}</em>
+  //       }
 
-      if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>
-      }
-    }
+  //       if (obj.underline) {
+  //         modifiedText = <u key={index}>{text}</u>
+  //       }
+  //     }
 
-    switch (type) {
-      case 'heading-two':
-        return (
-          <h2 key={index} className="mb-4 text-4xl font-semibold">
-            {modifiedText.map((item: any, i: any) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h2>
-        )
-      case 'heading-three':
-        return (
-          <h3 key={index} className="mb-4 text-xl font-semibold">
-            {modifiedText.map((item: any, i: any) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h3>
-        )
-      case 'paragraph':
-        return (
-          <p key={index} className="mb-8">
-            {modifiedText.map((item: any, i: any) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
-        )
-      case 'heading-four':
-        return (
-          <h4 key={index} className="text-md mb-4 font-semibold">
-            {modifiedText.map((item: any, i: any) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h4>
-        )
-      case 'image':
-        return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
-        )
-      default:
-        return modifiedText
-    }
-  }
+  //     switch (type) {
+  //       case 'heading-two':
+  //         return (
+  //           <h2 key={index} className="mb-4 text-4xl font-semibold">
+  //             {modifiedText.map((item: any, i: any) => (
+  //               <React.Fragment key={i}>{item}</React.Fragment>
+  //             ))}
+  //           </h2>
+  //         )
+  //       case 'heading-three':
+  //         return (
+  //           <h3 key={index} className="mb-4 text-xl font-semibold">
+  //             {modifiedText.map((item: any, i: any) => (
+  //               <React.Fragment key={i}>{item}</React.Fragment>
+  //             ))}
+  //           </h3>
+  //         )
+  //       case 'heading-four':
+  //         return (
+  //           <h4 key={index} className="text-md mb-4 font-semibold">
+  //             {modifiedText.map((item: any, i: any) => (
+  //               <React.Fragment key={i}>{item}</React.Fragment>
+  //             ))}
+  //           </h4>
+  //         )
+  //       case 'paragraph':
+  //         return (
+  //           <p key={index} className="mb-8">
+  //             {modifiedText.map((item: any, i: any) => (
+  //               <React.Fragment key={i}>{item}</React.Fragment>
+  //             ))}
+  //           </p>
+  //         )
+  //       case 'numbered-list':
+  //         return (
+  //           <ul key={index}>
+  //             <li key={index} className="text-3xl">
+  //               {modifiedText.map((item: any, i: any) => (
+  //                 <React.Fragment key={i}>{item}</React.Fragment>
+  //               ))}
+  //             </li>
+  //           </ul>
+  //         )
+  //       case 'image':
+  //         return (
+  //           <img
+  //             key={index}
+  //             alt={obj.title}
+  //             height={obj.height}
+  //             width={obj.width}
+  //             src={obj.src}
+  //           />
+  //         )
+  //       default:
+  //         return modifiedText
+  //     }
+  //   }
 
   return (
     <div className="relative mb-8 rounded-lg pb-12 text-white lg:p-8">
@@ -106,7 +117,7 @@ const PostDetail = ({ post }: any) => {
             <span>{moment(post.createdAt).format('MMM, DD, YYYY')}</span>
           </div>
         </div>
-        <CategoriesButtons />
+        <CategoriesButtons post={post} />
         <div className="reative mb-6 overflow-hidden">
           <img
             src={post.featuredImage.url}
@@ -114,13 +125,10 @@ const PostDetail = ({ post }: any) => {
             className="h-full w-full rounded-t-lg object-top"
           />
         </div>
-        {post.content.raw.children.map((typeObj: any, index: any) => {
-          const children = typeObj.children.map((item: any, itemIndex: any) =>
-            getContentFragment(itemIndex, item.text, item, typeObj)
-          )
-
-          return getContentFragment(index, children, typeObj, typeObj.type)
-        })}
+        <div
+          className="mb-6 h-auto"
+          dangerouslySetInnerHTML={{ __html: post.content.html }}
+        ></div>
       </div>
     </div>
   )
