@@ -19,35 +19,25 @@ const about = () => {
             </h2>
             <p>
               {' '}
-              This section would highlight my past and being fathered by my dad
-              and the struggles and problems there were. Then talk about the
-              call to do something like this and be the infulence that God has
-              called me to be. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Netus semper nulla nunc, interdum sed. Urna,
-              pretium in mattis nibh eget. Orci, at aliquet libero, consequat
-              enim. Nunc sed varius urna bibendum cras aenean tristique. Eros
-              quis aliquet id sit vel cursus gravida. Enim netus nisi nullam
-              nunc feugiat nunc, ut mi. Egestas tristique tortor montes, magna
-              malesuada dui. Ultrices tristique at ut lorem tortor. Sed mi fames
-              amet mauris. Mi ultrices scelerisque cursus diam arcu purus massa
-              consequat faucibus. Ornare placerat id consequat mauris cursus
-              rhoncus duis hac. Enim habitant et purus eget magna iaculis est
-              euismod in. Egestas pulvinar vitae urna quis. Enim elementum
-              ultrices donec vitae, arcu. A netus congue ipsum vestibulum eget
-              amet. Non bibendum etiam tristique non et pretium odio. Malesuada
-              iaculis mus nulla nec. Ultricies aliquam aliquam pellentesque in
-              sagittis. Ipsum pulvinar consequat vitae sed leo lobortis ornare
-              odio. Erat eget euismod nunc viverra parturient. Consequat ac
-              lectus lacinia sem. Pharetra, rutrum semper mi hendrerit vulputate
-              et. Nunc nec scelerisque ultricies arcu pharetra, mauris et
-              laoreet. Feugiat scelerisque vivamus id convallis dictum dictum
-              diam.
+              My girlfriend at the time(now wife 🙌) came to visit where I lived
+              a few times during the early years of our relationship. During
+              this time, we hung out and whatnot. On January 2nd of 2015, we
+              found out that she was pregnant. This was naturally huge but it
+              carried a greater impact because she was 19 at the time and I was
+              21. We by no means were ready to start a family. As a matter of
+              fact, we only knew each other since September of 2014. Five months
+              prior! Crazy! Nonetheless, this was the beginning of something I
+              had no idea that was going to happen. Something that I envisioned
+              for myself many, many, many years in the future. I knew that I had
+              to prepare to become a father (and eventually a husband). I was
+              not only scared but still had child-like thinking. Little did I
+              know this was going to be a wild ride!
             </p>
           </div>
           <div className="w-full md:w-1/2">
             <img
               src="../begin-photo.jpg"
-              alt="Early photo of me"
+              alt="early photo of the family"
               className="mx-auto md:ml-auto md:mr-0"
             />
           </div>
@@ -59,8 +49,8 @@ const about = () => {
         <div className="container mx-auto flex flex-col-reverse justify-between gap-7 md:flex-row">
           <div className="w-full md:w-1/2">
             <img
-              src="../begin-photo.jpg"
-              alt="Early photo of me"
+              src="../family-photo.jpeg"
+              alt="current photo of the family"
               className="mx-auto md:mr-auto md:ml-0"
             />
           </div>
@@ -70,29 +60,18 @@ const about = () => {
             </h2>
             <p>
               {' '}
-              This section would highlight my past and being fathered by my dad
-              and the struggles and problems there were. Then talk about the
-              call to do something like this and be the infulence that God has
-              called me to be. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Netus semper nulla nunc, interdum sed. Urna,
-              pretium in mattis nibh eget. Orci, at aliquet libero, consequat
-              enim. Nunc sed varius urna bibendum cras aenean tristique. Eros
-              quis aliquet id sit vel cursus gravida. Enim netus nisi nullam
-              nunc feugiat nunc, ut mi. Egestas tristique tortor montes, magna
-              malesuada dui. Ultrices tristique at ut lorem tortor. Sed mi fames
-              amet mauris. Mi ultrices scelerisque cursus diam arcu purus massa
-              consequat faucibus. Ornare placerat id consequat mauris cursus
-              rhoncus duis hac. Enim habitant et purus eget magna iaculis est
-              euismod in. Egestas pulvinar vitae urna quis. Enim elementum
-              ultrices donec vitae, arcu. A netus congue ipsum vestibulum eget
-              amet. Non bibendum etiam tristique non et pretium odio. Malesuada
-              iaculis mus nulla nec. Ultricies aliquam aliquam pellentesque in
-              sagittis. Ipsum pulvinar consequat vitae sed leo lobortis ornare
-              odio. Erat eget euismod nunc viverra parturient. Consequat ac
-              lectus lacinia sem. Pharetra, rutrum semper mi hendrerit vulputate
-              et. Nunc nec scelerisque ultricies arcu pharetra, mauris et
-              laoreet. Feugiat scelerisque vivamus id convallis dictum dictum
-              diam.
+              Fast forward to today. We are now going on 8 years of marriage, 9
+              years of knowing each other, 1 son (the one that changed it all)
+              who'll be 8 years old, and another son who'll be 6 years old. It's
+              only by the grace of God that we've gotten this far! Please
+              understand, things are by no means perfect or in order. As a
+              matter of fact, they are far from. However, the main approach that
+              I take is I need to trust God and have Him lead. If he doesn't, I
+              get in the way and It's nothing my kids and my wife need. You'll
+              see all of that as you explore and notice everything that I
+              struggle with and am looking to Jesus to guide the way. I hope you
+              find encouragement as we try, through the grace of God, to Father
+              Like The Father.
             </p>
           </div>
         </div>

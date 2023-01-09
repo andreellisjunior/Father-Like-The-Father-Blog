@@ -132,7 +132,7 @@ export const getCategories = async () => {
 
 export const getPostCategories = async (slug: any) => {
   const query = gql`
-    query GetPostCategories($slug: String!) {
+    query getPostCategories($slug: String!) {
       post(where: { slug: $slug }) {
         categories {
           name

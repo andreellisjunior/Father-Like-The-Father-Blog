@@ -1,6 +1,6 @@
-import React from 'react'
 import moment from 'moment'
 import Link from 'next/link'
+import React from 'react'
 
 const PostCard = ({ post }: any) => {
   return (
@@ -24,7 +24,7 @@ const PostCard = ({ post }: any) => {
             width="30px"
             className="rounded-full align-middle"
           />
-          <p className="ml-2 inline align-middle text-lg ">
+          <p className="ml-2 mb-0 inline align-middle text-lg">
             {post.author.name}
           </p>
         </div>

@@ -1,7 +1,7 @@
-import React from 'react'
 import { motion } from 'framer-motion'
-import animations from '../animations/animations'
+import React, { useRef } from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
+import animations from '../animations/animations'
 
 const HeroSection = () => {
   return (
@@ -14,15 +14,18 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
           variants={animations.containerAnimation}
-          className="container z-50 mx-auto flex flex-col items-start gap-9 text-white"
+          className="container z-50 mx-auto flex flex-col items-center gap-9 text-center text-white sm:items-start sm:text-left"
         >
           <motion.h1
             variants={animations.item}
-            className="text-7xl font-semibold"
+            className="text-5xl font-semibold sm:text-7xl"
           >
             FATHER LIKE THE FATHER
           </motion.h1>
-          <motion.h3 variants={animations.item} className="text-3xl capitalize">
+          <motion.h3
+            variants={animations.item}
+            className="text-2xl capitalize sm:text-3xl"
+          >
             Fathering our children like God fathers us.
           </motion.h3>
           <motion.button

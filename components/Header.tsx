@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import React from 'react'
 
 import animations from '../animations/animations'
 
@@ -12,7 +12,7 @@ const Header = () => {
           initial="hidden"
           animate="visible"
           variants={animations.containerAnimation}
-          className="flex w-full items-center justify-between py-5"
+          className="flex w-full flex-col items-center justify-center gap-4 py-5 sm:flex-row sm:justify-between sm:gap-0"
         >
           <div className="block md:float-left">
             <Link href="/">
@@ -26,7 +26,7 @@ const Header = () => {
               </span>
             </Link>
           </div>
-          <div className="ml-auto flex items-center justify-end font-primary text-sm md:block">
+          <div className="ml-0 flex items-center justify-end font-primary text-sm sm:ml-auto md:block">
             {/* {categories.map(category => (
                             <Link key={category.slug} href={`/category/${category.slug}`}>
                                 <span className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer">
