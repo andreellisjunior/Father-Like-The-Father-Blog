@@ -24,14 +24,14 @@ const about = () => {
               this time, we hung out and whatnot. On January 2nd of 2015, we
               found out that she was pregnant. This was naturally huge but it
               carried a greater impact because she was 19 at the time and I was
-              21. We by no means were ready to start a family. As a matter of
-              fact, we only knew each other since September of 2014. Five months
-              prior! Crazy! Nonetheless, this was the beginning of something I
-              had no idea that was going to happen. Something that I envisioned
-              for myself many, many, many years in the future. I knew that I had
-              to prepare to become a father (and eventually a husband). I was
-              not only scared but still had child-like thinking. Little did I
-              know this was going to be a wild ride!
+              21. We, by no means, weren't ready to start a family. As a matter
+              of fact, we only knew each other since September of 2014. Five
+              months prior! Crazy! Nonetheless, this was the beginning of
+              something I had no idea that was going to happen. Something that I
+              envisioned for myself many, many, many years in the future. I knew
+              that I had to prepare to become a father (and eventually a
+              husband). I was not only scared but still had child-like thinking.
+              Little did I know this was going to be a wild ride!
             </p>
           </div>
           <div className="w-full md:w-1/2">
