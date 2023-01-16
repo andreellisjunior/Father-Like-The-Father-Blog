@@ -2,29 +2,58 @@ import React from 'react'
 
 const ContactSection = () => {
   return (
-    <div className="flex w-full items-center justify-center bg-primary py-28 px-10">
-      <div className="flex max-w-7xl flex-col items-center justify-center gap-5 text-center text-white">
-        <h2 className="font-primary text-3xl font-bold">
-          Questions? Comments? Thoughts? Complete the form below and we'll get
-          back to you as soon as possible!
-        </h2>
-        <p className="max-w-5xl text-xl leading-8">
-          An initiative and a new resource to finding how to father our own
-          children the way The Father himself fathers us. Too often, we find
-          ourselves trying very hard to either be like our earthly fathers or
-          fathers figures, or NOT be like them. Either they did it "right" or
-          they've completely missed the mark. Well, what about God The Father?
-          Don't you think He has a say in how we father our children? As someone
-          who has made the choice to take fathering very serious, I want to make
-          the right choices. Not only for me, but for my sons. Walk with me as
-          we figure out what it truely means to
-          <br />
-          <span className="mt-2 inline-block text-2xl italic">
-            Father Like The Father.
-          </span>
-        </p>
+    <section className="relative flex h-full w-full flex-col items-center justify-between bg-[#005C45] md:h-full md:flex-row">
+      <div className="contact-section-img h-full w-0 md:h-[175vh] md:min-h-screen md:w-1/2 lg:h-full"></div>
+      <div className="form-container relative h-auto w-full md:w-1/2">
+        <div className="form-wrapper relative right-auto top-auto left-0 mx-12 my-12 h-auto w-auto rounded-2xl bg-white px-6 py-6 md:relative md:top-1/2 md:left-auto md:right-40 md:w-full md:px-12 md:py-12">
+          <h3 className="font-bold text-primary">
+            Have any questions? Something on your mind?
+          </h3>
+          <p className="font-bold text-primary ">
+            Fill out the form or send me an email: fatherlikethefather@gmail.com
+          </p>
+          <form>
+            <div className="form-input mt-8">
+              <label htmlFor="name" className="font-bold text-primary">
+                Full Name:
+              </label>
+              <input
+                type="text"
+                name="name"
+                className="my-4 block w-full rounded-xl bg-gray-300 px-4 py-2"
+              />
+            </div>
+            <div className="form-input mt-8">
+              <label htmlFor="email" className="font-bold text-primary">
+                Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="my-4 block w-full rounded-xl bg-gray-300 px-4 py-2"
+              />
+            </div>
+            <div className="form-input mt-8">
+              <label htmlFor="message" className="font-bold text-primary">
+                Message:
+              </label>
+              <textarea
+                name="message"
+                className="my-4 block w-full rounded-xl bg-gray-300 px-4 py-2"
+              />
+            </div>
+            <div className="form-input mt-8">
+              <button
+                type="submit"
+                className="ransistion inline-block transform cursor-pointer rounded-full bg-primary px-8 py-1 text-lg font-medium text-white shadow-lg duration-500 hover:-translate-y-1 hover:shadow-xl"
+              >
+                SUBMIT
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -4,7 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Spartan:wght@300;400;500;700&display=swap');
 
-* {
+*,
+html,
+body {
   box-sizing: border-box;
 }
 html {
@@ -139,4 +141,13 @@ a {
   &.about::before {
     content: none;
   }
+}
+
+// Contact Section Image
+.contact-section-img {
+  background: url('/contact-form-section.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
 }

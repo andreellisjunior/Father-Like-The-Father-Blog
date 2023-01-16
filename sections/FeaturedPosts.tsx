@@ -1,51 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
+import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import animations from '../animations/animations'
 
 import { FeaturedPostCard } from '../components'
-import { FeaturedPostCardFlip } from '../components'
 import { getFeaturedPosts } from '../services'
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 640 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
-  },
-}
 
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([])
-  const [dataLoaded, setDataLoaded] = useState(false)
 
   useEffect(() => {
-    getFeaturedPosts().then((result) => {
+    getFeaturedPosts().then((result: any) => {
       setFeaturedPosts(result)
-      setDataLoaded(true)
     })
   }, [])
 
   return (
-    <div className="relative bg-primary py-28">
-      <h2 className="text-center font-primary text-6xl font-bold text-white">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-125px' }}
+      variants={animations.containerAnimation}
+      className="relative bg-primary py-28"
+    >
+      <motion.h2
+        variants={animations.item}
+        className="text-center font-primary text-6xl font-bold text-white"
+      >
         FEATURED BLOG POSTS
-      </h2>
+      </motion.h2>
 
       {featuredPosts.map((post, index) => (
         <FeaturedPostCard key={index} post={post} />
       ))}
-    </div>
+    </motion.div>
   )
 }
 

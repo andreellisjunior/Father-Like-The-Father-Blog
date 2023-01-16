@@ -1,13 +1,27 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import animations from '../animations/animations'
 
 const AboutSection = () => {
   return (
-    <div className="flex w-full items-center justify-center bg-primary py-28 px-10">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
+      variants={animations.aboutAnimations}
+      className="flex w-full items-center justify-center py-28 px-10"
+    >
       <div className="flex max-w-7xl flex-col items-center justify-center gap-5 text-center text-white">
-        <h2 className="font-primary text-6xl font-bold">
+        <motion.h2
+          variants={animations.aboutItems}
+          className="font-primary text-6xl font-bold"
+        >
           WHAT IS FATHER LIKE THE FATHER?
-        </h2>
-        <p className="max-w-5xl text-xl leading-8">
+        </motion.h2>
+        <motion.p
+          variants={animations.aboutItems}
+          className="max-w-5xl text-xl leading-8"
+        >
           An initiative and a new resource to finding how to father our own
           children the way The Father himself fathers us. Too often, we find
           ourselves trying very hard to either be like our earthly fathers or
@@ -21,9 +35,9 @@ const AboutSection = () => {
           <span className="mt-2 inline-block text-2xl italic">
             Father Like The Father.
           </span>
-        </p>
+        </motion.p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
